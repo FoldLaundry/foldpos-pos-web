@@ -1,1 +1,1 @@
-ref=claude/business-types sha=5f65bf8 built=2026-09-06T01:04:00Z api=https://app.foldpos.com signup=off
+ref=claude/business-types sha=dba68c1 built=2026-09-06T01:13:44Z api=https://app.foldpos.com signup=off

@@ -174772,7 +174772,7 @@ L(){return"FoldBrandIconVariant."+this.b}}
 A.DY.prototype={
 q(a){var s=null,r=this.c===B.RQ,q=r?B.z:B.N,p=r?B.RP:B.FU,o=r?B.z:B.br,n=r?B.N:B.z,m=this.f,l=this.d,k=l*0.2,j=l*0.1,i=A.ch(s,s,s,A.A(A.a([new A.Jb(p,l*0.88,"",s),A.X(s,s,l*0.18),A.d("Fold",s,s,s,s,s,A.bj(s,s,q,s,s,s,s,s,s,s,s,l*0.62,s,s,B.ax,s,1,!0,s,0.2,s,s,s,s,s,s),s,s,s),A.X(s,s,l*0.14),new A.fL(new A.J(o,s,s,A.o(k),s,s,s,B.y),B.cM,new A.w(new A.ae(k,j,k,j),A.d("POS",s,s,s,s,s,A.bj(s,s,n,s,s,s,s,s,s,s,s,l*0.34,s,s,B.ad,s,1,!0,s,1,s,s,s,s,s,s),s,s,s),s),s)],t.p),B.v,B.h,B.Q,0,s),!1,s,s,s,s,!1,s,!1,s,s,s,s,s,s,s,s,s,s,"Fold POS",m,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,B.aH,s)
 if(!m)return i
-return A.f7(A.cA(B.bG,A.lu(i,"https://foldpos.com"),B.D,!1,B.cge,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,A.dYG(),s,s,s,s,s,s,!1,B.aP),B.cO,s,s,s,s)}}
+return A.lu(A.f7(A.cA(B.bG,i,B.D,!1,B.cge,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,A.dYG(),s,s,s,s,s,s,!1,B.aP),B.cO,s,s,s,s),"https://foldpos.com")}}
 A.Jb.prototype={
 q(a){var s,r,q,p=null
 switch(this.c.a){case 0:s="assets/icons/branding/fold-icon-blue.svg"
