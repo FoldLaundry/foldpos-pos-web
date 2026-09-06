@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="96" viewBox="0 0 360 96" fill="none">
+  
+  <g transform="translate(6,24) scale(1)">
+    <rect x="11" y="11" width="21" height="8.5" rx="4.25" fill="#ffffff" fill-opacity="0.40"></rect>
+    <rect x="8" y="20.5" width="32" height="8.5" rx="4.25" fill="#ffffff" fill-opacity="0.68"></rect>
+    <rect x="8" y="30" width="32" height="8.5" rx="4.25" fill="#ffffff"></rect>
+    <rect x="16.5" y="13.4" width="2" height="4" rx="1" fill="#0861c5" fill-opacity="0.35"></rect>
+    <rect x="13.5" y="22.9" width="2" height="4" rx="1" fill="#0861c5" fill-opacity="0.35"></rect>
+    <rect x="13.5" y="32.4" width="2" height="4" rx="1" fill="#0861c5" fill-opacity="0.35"></rect>
+  </g>
+  <text x="66" y="60" font-size="46" font-weight="400" letter-spacing="0.2" fill="#ffffff">Fold</text>
+  <rect x="176" y="34" width="52" height="28" rx="8" fill="#ffffff"></rect>
+  <text x="185" y="53" font-size="15" font-weight="500" letter-spacing="1" fill="#0b1b2b">POS</text>
+</svg>
