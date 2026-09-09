@@ -1,1 +1,1 @@
-ref=claude/signup-fixes sha=aa2ee1a built=2026-09-09T05:37:23Z api=https://app.foldpos.com signup=on
+ref=claude/signup-fixes sha=4282000 built=2026-09-09T05:45:25Z api=https://app.foldpos.com signup=on
