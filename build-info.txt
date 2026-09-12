@@ -1,1 +1,1 @@
-ref=claude/hq-login sha=83388ae built=2026-09-09T20:26:40Z api=https://app.foldpos.com signup=on
+ref=develop sha=82b7d4b built=2026-09-12T00:00:54Z
