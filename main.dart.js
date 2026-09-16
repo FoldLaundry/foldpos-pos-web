@@ -264098,12 +264098,14 @@ $0(){this.a.c.go.si("")
 return""},
 $S:0}
 A.cjp.prototype={
-$2(a,b){var s,r,q=null,p=this.a,o=p.c
-p=p.d
-s=new A.bl3(o,p,q)
-r=new A.ayH(o,p,q)
-if(!(b.b>=980))return A.t(A.b([new A.P(q,260,r,q),B.J,A.I(s,1)],t.p),B.r,q,B.h,B.j,0,B.o)
-return A.C(A.b([A.I(s,11),B.b7,A.I(r,9)],t.p),B.E,q,B.h,B.j,0,q)},
+$2(a,b){var s,r,q,p=null,o=b.b,n=this.a,m=n.c
+n=n.d
+s=new A.bl3(m,n,p)
+r=new A.ayH(m,n,p)
+if(!(o>=760))return A.t(A.b([A.I(s,1),B.J,new A.P(p,220,r,p)],t.p),B.r,p,B.h,B.j,0,B.o)
+q=o>=1100
+o=A.I(s,q?11:3)
+return A.C(A.b([o,B.b7,A.I(r,q?9:2)],t.p),B.E,p,B.h,B.j,0,p)},
 $S:34}
 A.arP.prototype={
 O(){return new A.b84()}}
