@@ -32,8 +32,136 @@
 
   <title>Fold POS</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    /*
+      Cold-load splash. It is markup + CSS in this file, so it paints on the
+      first parse — before flutter_bootstrap.js, the engine or any font has
+      been fetched. Nothing here loads from the network.
+    */
+    :root {
+      --fold-bg: #F7F8FA;
+      --fold-mark: #0861C5;
+      --fold-text: #0B1B2B;
+      --fold-muted: #737584;
+      --fold-track: #E3E6EB;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fold-bg: #0B1B2B;
+        --fold-mark: #48CFFF;
+        --fold-text: #F7F8FA;
+        --fold-muted: #8A97A6;
+        --fold-track: #1B2E42;
+      }
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: var(--fold-bg);
+    }
+
+    #fold-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 2147483647;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      background-color: var(--fold-bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      opacity: 1;
+      transition: opacity 240ms ease-out;
+    }
+
+    #fold-splash.fold-splash--out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .fold-splash__lockup {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .fold-splash__mark {
+      width: 56px;
+      height: 56px;
+      display: block;
+    }
+
+    .fold-splash__wordmark {
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--fold-text);
+      line-height: 1;
+    }
+
+    .fold-splash__wordmark span {
+      color: var(--fold-muted);
+      font-weight: 500;
+      margin-left: 8px;
+      font-size: 20px;
+      letter-spacing: 0.08em;
+    }
+
+    .fold-splash__track {
+      width: 180px;
+      height: 3px;
+      border-radius: 100px;
+      background-color: var(--fold-track);
+      overflow: hidden;
+    }
+
+    .fold-splash__bar {
+      display: block;
+      width: 40%;
+      height: 100%;
+      border-radius: 100px;
+      background-color: var(--fold-mark);
+      animation: fold-splash-slide 1.4s ease-in-out infinite;
+    }
+
+    @keyframes fold-splash-slide {
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(250%); }
+    }
+
+    /* No motion: a steady bar, and the splash disappears instead of fading. */
+    @media (prefers-reduced-motion: reduce) {
+      #fold-splash { transition: none; }
+      .fold-splash__bar {
+        animation: none;
+        width: 100%;
+        opacity: 0.5;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div id="fold-splash" role="status" aria-live="polite" aria-label="Loading Fold POS">
+    <div class="fold-splash__lockup">
+      <svg class="fold-splash__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
+        <rect x="11" y="11" width="21" height="8.5" rx="4.25" fill="var(--fold-mark)" fill-opacity="0.34"></rect>
+        <rect x="8" y="20.5" width="32" height="8.5" rx="4.25" fill="var(--fold-mark)" fill-opacity="0.62"></rect>
+        <rect x="8" y="30" width="32" height="8.5" rx="4.25" fill="var(--fold-mark)"></rect>
+        <rect x="16.5" y="13.4" width="2" height="4" rx="1" fill="#ffffff" fill-opacity="0.52"></rect>
+        <rect x="13.5" y="22.9" width="2" height="4" rx="1" fill="#ffffff" fill-opacity="0.52"></rect>
+        <rect x="13.5" y="32.4" width="2" height="4" rx="1" fill="#ffffff" fill-opacity="0.52"></rect>
+      </svg>
+      <div class="fold-splash__wordmark">Fold<span>POS</span></div>
+    </div>
+    <div class="fold-splash__track"><span class="fold-splash__bar"></span></div>
+  </div>
+
   <script>
     // Prevent browser from intercepting Cmd+F / Ctrl+F so Flutter can handle it
     window.addEventListener('keydown', function(e) {
@@ -43,6 +171,48 @@
       }
     }, { capture: true });
   </script>
+
+  <script>
+    // Taking the splash down.
+    //
+    // The trigger is Flutter's own `flutter-first-frame` window event, so the
+    // splash stays up for exactly as long as the engine takes to paint — this
+    // is the default `flutter_bootstrap.js`, which owns its own entrypoint, so
+    // there is no `onEntrypointLoaded` hook to pass here. Two backstops mean a
+    // slow or broken engine can never leave it stuck: a MutationObserver for
+    // the <flutter-view> element (in case the event fired before this script
+    // attached), and a hard 30s cap that removes it either way.
+    (function () {
+      var splash = document.getElementById('fold-splash');
+      if (!splash) return;
+      var removed = false;
+      var observer = null;
+      var capTimer = null;
+
+      function remove() {
+        if (removed) return;
+        removed = true;
+        if (observer) observer.disconnect();
+        if (capTimer) clearTimeout(capTimer);
+        splash.classList.add('fold-splash--out');
+        window.setTimeout(function () {
+          if (splash.parentNode) splash.parentNode.removeChild(splash);
+        }, 300);
+      }
+
+      window.addEventListener('flutter-first-frame', remove);
+
+      if (window.MutationObserver) {
+        observer = new MutationObserver(function () {
+          if (document.querySelector('flutter-view, flt-glass-pane')) remove();
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      }
+
+      capTimer = window.setTimeout(remove, 30000);
+    })();
+  </script>
+
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
