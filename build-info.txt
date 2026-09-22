@@ -1,1 +1,1 @@
-Web build 2026-09-22: develop @ b217652 - Schedule hub (Week, Today, Hours)
+ref=develop sha=9c1b279 built=2026-09-22T19:34:08Z
