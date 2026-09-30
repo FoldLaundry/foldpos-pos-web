@@ -1,1 +1,1 @@
-ref=develop sha=9c8d252 built=2026-09-28T21:23:14Z
+Web build 2026-09-30: develop @ 32a4fc85 - piece tracking (Pieces view, Plant & bags, Plant & drop stores)
