@@ -1,1 +1,1 @@
-Web build 2026-09-30: develop @ 32a4fc85 - piece tracking (Pieces view, Plant & bags, Plant & drop stores)
+Web build 2026-09-30: develop @ 857c817a - piece tracking (Pieces view, Plant & bags, Plant & drop stores)
