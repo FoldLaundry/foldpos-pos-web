@@ -1,1 +1,1 @@
-ref=develop sha=bd613ce6 built=2026-10-05T06:32:38Z
+ref=develop+assistants sha=eeb14673 built=2026-10-05T10:55:36Z
