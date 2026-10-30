@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-  <rect x="11" y="11" width="21" height="8.5" rx="4.25" fill="#ffffff" fill-opacity="0.40"></rect>
-  <rect x="8" y="20.5" width="32" height="8.5" rx="4.25" fill="#ffffff" fill-opacity="0.68"></rect>
-  <rect x="8" y="30" width="32" height="8.5" rx="4.25" fill="#ffffff"></rect>
-  <rect x="16.5" y="13.4" width="2" height="4" rx="1" fill="#0861c5" fill-opacity="0.35"></rect>
-  <rect x="13.5" y="22.9" width="2" height="4" rx="1" fill="#0861c5" fill-opacity="0.35"></rect>
-  <rect x="13.5" y="32.4" width="2" height="4" rx="1" fill="#0861c5" fill-opacity="0.35"></rect>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" role="img" aria-label="Fold POS"><path d="M31 15 L69 15 Q74 15 74 20 L74 83 L68 78 L62 83 L56 78 L50 83 L44 78 L38 83 L32 78 L26 83 L26 20 Q26 15 31 15 Z" fill="#ffffff"/><path d="M38.5 26 H61.5 a5.5 5.5 0 0 1 0 11 H38.5 a5.5 5.5 0 0 1 0 -11 Z" fill="#1e5eff"/><path d="M43.5 42 H56.5 a5.5 5.5 0 0 1 0 11 H43.5 a5.5 5.5 0 0 1 0 -11 Z" fill="#1e5eff"/><path d="M38.5 58 H61.5 a5.5 5.5 0 0 1 0 11 H38.5 a5.5 5.5 0 0 1 0 -11 Z" fill="#1e5eff"/></svg>
