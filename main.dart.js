@@ -47827,10 +47827,10 @@ if(r==null)r=$.l=B.k
 if(!$.ac.I(r.V(A.a8(s),null)))return b.$0()
 r=$.l
 return(r==null?$.l=B.k:r).A(null,s).b00(a,b,c)},
-aed(a,b,c){return A.fXx("print-receipt-"+a,new A.cMg(a,c,b),t.N)},
-aAM(a,b,c){return A.hxp(a,b,c)},
-hxp(a,b,c){var s=0,r=A.k(t.N),q,p=2,o=[],n,m,l,k,j,i,h,g,f,e,d
-var $async$aAM=A.f(function(a0,a1){if(a0===1){o.push(a1)
+aed(a,b,c,d){return A.fXx("print-receipt-"+a,new A.cMg(a,d,c,b),t.N)},
+aAM(a,b,c,d){return A.hxp(a,b,c,d)},
+hxp(a,b,c,a0){var s=0,r=A.k(t.N),q,p=2,o=[],n,m,l,k,j,i,h,g,f,e,d
+var $async$aAM=A.f(function(a1,a2){if(a1===1){o.push(a2)
 s=p}for(;;)switch(s){case 0:$.x()
 i=t.e8
 h=$.l
@@ -47843,8 +47843,8 @@ s=n!=null?3:4
 break
 case 3:p=6
 s=9
-return A.d(n.aoz(a,new A.boQ(!0,b,!1,null)),$async$aAM)
-case 9:l=a1
+return A.d(n.aoz(a,new A.boQ(!0,c,!1,null,b)),$async$aAM)
+case 9:l=a2
 k=l.UL(B.rO)
 if(k!=null){i=k.c
 q="Receipt queued on "+i
@@ -47869,12 +47869,12 @@ case 5:s=2
 break
 case 8:case 4:s=10
 return A.d(A.pF(),$async$aAM)
-case 10:f=a1
-if(b==null){i=f.e
-if(i<2)i=2}else i=b
+case 10:f=a2
+i=f.e
+if(i<2)i=2
 s=11
-return A.d(A.LP(i,a,c),$async$aAM)
-case 11:e=a1
+return A.d(A.LP(i,a,a0),$async$aAM)
+case 11:e=a2
 if(!e.a){i=e.b
 if(B.c.ga7(i))i="Receipt did not print"
 throw A.O(A.bo(A.fXy(i,m)))}i=e.b
@@ -47884,10 +47884,10 @@ break
 case 1:return A.i(q,r)
 case 2:return A.h(o.at(-1),r)}})
 return A.j($async$aAM,r)},
-cMh(a,b,c){return A.fXx("print-tags-"+a,new A.cMi(a,b,c),t.N)},
-bkH(a,b,c){return A.hxq(a,b,c)},
-hxq(a,b,c){var s=0,r=A.k(t.N),q,p=2,o=[],n,m,l,k,j,i,h,g,f,e,d
-var $async$bkH=A.f(function(a0,a1){if(a0===1){o.push(a1)
+cMh(a,b,c,d){return A.fXx("print-tags-"+a,new A.cMi(a,c,d,b),t.N)},
+bkH(a,b,c,d){return A.hxq(a,b,c,d)},
+hxq(a,b,c,a0){var s=0,r=A.k(t.N),q,p=2,o=[],n,m,l,k,j,i,h,g,f,e,d
+var $async$bkH=A.f(function(a1,a2){if(a1===1){o.push(a2)
 s=p}for(;;)switch(s){case 0:$.x()
 h=t.e8
 g=$.l
@@ -47900,8 +47900,8 @@ s=n!=null?3:4
 break
 case 3:p=6
 s=9
-return A.d(n.aoz(a,new A.boQ(!1,null,!0,c)),$async$bkH)
-case 9:l=a1
+return A.d(n.aoz(a,new A.boQ(!1,null,!0,a0,b)),$async$bkH)
+case 9:l=a2
 k=l.UL(B.GX)
 if(k!=null){j=k.e
 if(j==null)h="Tags queued on "+k.c
@@ -47927,8 +47927,8 @@ break
 case 5:s=2
 break
 case 8:case 4:s=10
-return A.d(A.Rp(a,b),$async$bkH)
-case 10:e=a1
+return A.d(A.Rp(a,c),$async$bkH)
+case 10:e=a2
 if(!e.a){h=e.b
 if(B.c.ga7(h))h="Tags did not print"
 throw A.O(A.bo(A.fXy(h,m)))}h=e.b
@@ -47938,12 +47938,16 @@ break
 case 1:return A.i(q,r)
 case 2:return A.h(o.at(-1),r)}})
 return A.j($async$bkH,r)},
-cMg:function cMg(a,b,c){this.a=a
-this.b=b
-this.c=c},
-cMi:function cMi(a,b,c){this.a=a
-this.b=b
-this.c=c},
+cMg:function cMg(a,b,c,d){var _=this
+_.a=a
+_.b=b
+_.c=c
+_.d=d},
+cMi:function cMi(a,b,c,d){var _=this
+_.a=a
+_.b=b
+_.c=c
+_.d=d},
 bo2(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,a0,a1,a2,a3){return new A.aCS(m,n,a0,c,b,d,g,h,e,f,q,r,s,l,a1,a2,a3,o,i,k,a,p,j)},
 hzl(a2,a3,a4,a5,a6,a7){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d="readyTime",c=A.h6H(a2.h(0,"customer")),b=A.hOV(a2),a=A.hQB(b,a2),a0=A.a66(a2.h(0,"pieceCount")),a1=a0==null?A.a66(a2.h(0,"totalPieces")):a0
 if(a1==null)a1=new A.bX(a,A.H(a).j("bX<2>")).cQ(0,0,new A.cTR())
@@ -91549,11 +91553,12 @@ aee:function aee(a,b){this.b=a
 this.c=b},
 cMk:function cMk(){},
 cMl:function cMl(){},
-boQ:function boQ(a,b,c,d){var _=this
+boQ:function boQ(a,b,c,d,e){var _=this
 _.a=a
 _.b=b
 _.d=c
-_.f=d},
+_.f=d
+_.r=e},
 a0m:function a0m(a,b,c){this.d=a
 this.e=b
 this.f=c},
@@ -242299,7 +242304,7 @@ var $async$$0=A.f(function(a,b){if(a===1)return A.h(b,r)
 for(;;)switch(s){case 0:o=p.a
 n=p.b
 s=3
-return A.d(A.aed(n.a,null,n.d),$async$$0)
+return A.d(A.aed(n.a,!1,null,n.d),$async$$0)
 case 3:n=b
 o.k3.si(!1)
 o.k2.si(n)
@@ -242315,7 +242320,7 @@ var $async$$0=A.f(function(a,b){if(a===1)return A.h(b,r)
 for(;;)switch(s){case 0:o=p.a
 n=p.b
 s=3
-return A.d(A.cMh(n.a,n.d,null),$async$$0)
+return A.d(A.cMh(n.a,!1,n.d,null),$async$$0)
 case 3:n=b
 o.k3.si(!1)
 o.k2.si(n)
@@ -257000,7 +257005,7 @@ var $async$$1=A.f(function(b,c){if(b===1)return A.h(c,r)
 for(;;)switch(s){case 0:o=p.a
 n=o.id
 s=3
-return A.d(A.aed(a.b,p.b,a.c),$async$$1)
+return A.d(A.aed(a.b,!1,p.b,a.c),$async$$1)
 case 3:n.si(c)
 o.k1.si(!1)
 q=null
@@ -257016,7 +257021,7 @@ var $async$$1=A.f(function(b,c){if(b===1)return A.h(c,r)
 for(;;)switch(s){case 0:o=p.a
 n=o.id
 s=3
-return A.d(A.cMh(a.b,a.c,p.b),$async$$1)
+return A.d(A.cMh(a.b,!1,a.c,p.b),$async$$1)
 case 3:n.si(c)
 o.k1.si(!1)
 q=null
@@ -289278,10 +289283,12 @@ l.toString
 B.d.t(o,A.b([new A.j9(m,28,m),k,new A.j9(m,6,m),A.hs(B.c.m(l),B.wh,m)],s))}return A.asG(o,B.aao,B.vO)},
 $S:893}
 A.cMg.prototype={
-$0(){return A.aAM(this.a,this.c,this.b)},
+$0(){var s=this
+return A.aAM(s.a,s.d,s.c,s.b)},
 $S:65}
 A.cMi.prototype={
-$0(){return A.bkH(this.a,this.b,this.c)},
+$0(){var s=this
+return A.bkH(s.a,s.d,s.b,s.c)},
 $S:65}
 A.aCS.prototype={
 gapp(){var s,r,q,p=this,o=p.b
@@ -331599,7 +331606,7 @@ case 16:p=19
 k=n.dy
 k=k==null?null:k.b
 s=22
-return A.d(A.cMh(m,k,null),$async$Hx)
+return A.d(A.cMh(m,!0,k,null),$async$Hx)
 case 22:p=2
 s=21
 break
@@ -331627,9 +331634,8 @@ s=b==null?3:4
 break
 case 3:p=6
 h=n.dy
-h=h==null?null:h.b
 s=9
-return A.d(A.aed(a,n.id,h),$async$ZW)
+return A.d(A.aed(a,!0,null,h==null?null:h.b),$async$ZW)
 case 9:m=d
 if(J.au(m)!==0&&n.c!=null)A.a0(m,null,B.G,!1,null)
 p=2
@@ -331655,7 +331661,7 @@ A.a0(h,null,B.G,!0,null)}s=1
 break}h=n.dy
 h=h==null?null:h.b
 s=11
-return A.d(A.LP(n.id,a,h),$async$ZW)
+return A.d(A.LP(Math.max(n.id,2),a,h),$async$ZW)
 case 11:i=d
 if(!i.a&&n.c!=null){h=i.b
 n.fr=!0
@@ -401261,7 +401267,7 @@ case 20:p=22
 b3=J
 b4=j
 s=25
-return A.d(A.aed(a9.a,null,a9.b),$async$Yr)
+return A.d(A.aed(a9.a,!1,null,a9.b),$async$Yr)
 case 25:b3.bG(b4,b8)
 p=4
 s=24
@@ -401501,7 +401507,7 @@ case 42:p=44
 c7=J
 c8=f
 s=47
-return A.d(A.aed(a3,null,d1.b),$async$Dm)
+return A.d(A.aed(a3,!1,null,d1.b),$async$Dm)
 case 47:c7.bG(c8,d5)
 p=2
 s=46
@@ -401539,7 +401545,7 @@ case 3:p=6
 b=J
 a=l
 s=9
-return A.d(A.aed(e.a,null,e.b),$async$aa3)
+return A.d(A.aed(e.a,!1,null,e.b),$async$aa3)
 case 9:b.bG(a,a3)
 p=2
 s=8
@@ -401559,7 +401565,7 @@ case 10:p=13
 b=J
 a=l
 s=16
-return A.d(A.cMh(e.a,e.b,null),$async$aa3)
+return A.d(A.cMh(e.a,!1,e.b,null),$async$aa3)
 case 16:b.bG(a,a3)
 p=2
 s=15
@@ -402126,7 +402132,7 @@ case 7:p=9
 a6=J
 a7=m
 s=12
-return A.d(A.aed(a3.a,null,a3.b),$async$Ys)
+return A.d(A.aed(a3.a,!1,null,a3.b),$async$Ys)
 case 12:a6.bG(a7,b1)
 b=l
 a=B.c.aa(n.cx.toLowerCase(),"es")?"Imprimiendo el recibo. ":"Receipt printing. "
@@ -411212,11 +411218,10 @@ $S:2280}
 A.boQ.prototype={
 a2(){var s,r=this,q=A.B(t.N,t.z)
 q.k(0,"receipt",r.a)
-s=r.b
-if(s!=null)q.k(0,"receiptCopies",s)
 q.k(0,"tags",r.d)
 s=r.f
 if(s!=null)q.k(0,"pieceNumbers",s)
+if(r.r)q.k(0,"checkout",!0)
 return q}}
 A.a0m.prototype={}
 A.bph.prototype={
